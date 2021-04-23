@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Console</title>
+    <style>
+        body {
+            font-family: sans-serif
+        }
+        li {
+           list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <ul id="console">
+    </ul>
+    <script>
+        (function connect() {
+              var ws = new WebSocket('ws://localhost:8080/winningBids');
+              ws.onmessage = function (data) {
+                addToUi(data.data);
+              }
+
+              function addToUi(message) {
+                  var consoleList = document.getElementById('console');
+                  var jsonMsg = JSON.parse(message);
+                  var amount = new Intl.NumberFormat('en-AU', { style: 'currency', currency: 'AUD' }).format(jsonMsg.winningBidTotal)
+                  var message = `The project '${jsonMsg.projectSummary}' requested by '${jsonMsg.customerName}' was won by '${jsonMsg.tradieName}' for ${amount}`;
+                  var li = document.createElement('li');
+                  li.appendChild(document.createTextNode(message));
+                  consoleList.appendChild(li);
+              }
+        })();
+
+    </script>
+</body>
+</html>
