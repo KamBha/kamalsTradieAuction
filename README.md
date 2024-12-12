@@ -1,4 +1,6 @@
-This project was built as part of a coding interview. The brief was that there was an application that would allow customers to post projects with requirements including a description of the work, the number of hours expected, and the last day and time for accepting bids. I would not build the functionality to post project or bids, but would instead provide an interface that allowed the user to the winning projects and bids. I was allowed to create mock data.
+This project was built as part of a coding interview. The company in question requested I put this code up on GitHub. 
+
+The brief was that there was an application that would allow customers to post projects with requirements including a description of the work, the number of hours expected, and the last day and time for accepting bids. I would not build the functionality to post project or bids, but would instead provide an interface that allowed the user to the winning projects and bids. I was allowed to create mock data.
 
 The brief stated that there were 50K registered customers and on average, 100 projects are posted every day. On average, each project receives 50 bids. The tradesperson with the lowest bid for the project automatically wins the project when the deadline is reached.
 
