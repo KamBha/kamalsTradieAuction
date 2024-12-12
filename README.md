@@ -6,7 +6,7 @@ The brief stated that there were 50K registered customers and on average, 100 pr
 
 Tradespeople then bid to work on these projects using either a fixed price or hourly basis. 
 
-I set this app up to use web sockets to display the winning projects. I used a h2 DB to store information on the customers and the users.
+The project brief left it up to me to decide how to display the winning bids, but I chose to do this as a web page using web sockets to display the winning projects. I used a h2 DB to store information on the customers and the users.
 
 This project was my first SpringBoot application and was impressive enough for me to eventually get the job.
 
